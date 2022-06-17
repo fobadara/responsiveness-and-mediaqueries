@@ -1,0 +1,66 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.container{
+  width: 70%;
+}
+
+.centralize {
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+}
+
+/* Specific */
+fieldset {
+  padding: 2em;
+}
+
+input {
+  border: 1px solid #ccc;
+  width: 90%;
+  height: 1.5em;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+#submit {
+  width: 99%;
+  padding: 1.5em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.foot {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.foot .red {
+  color: red;
+}
+
+@media only screen and (min-width: 750px) {
+  .flex {
+    display: flex;
+  }
+  
+  .between {
+    justify-content: space-between;
+  }
+  
+  header,
+  main {
+    width: 45%;
+  }
+
+}
