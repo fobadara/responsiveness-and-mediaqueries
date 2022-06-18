@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700&display=swap');
+
+/* Variables */
+:root {
+  --primary-color: hsl(0, 100%, 74%);
+  --secondary-color: hsl(154, 59%, 51%);
+  --accent-color: hsl(248, 32%, 49%);
+  --neutral-color: hsl(249, 10%, 26%);
+  --grayish-color: hsl(246, 25%, 77%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
 /* General */
 body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  background: var(--primary-color) url("./images/bg-intro-mobile.png") no-repeat;
+  font-family: 'Poppins', sans-serif;
+  color: var(--white-color);
+  font-size: 16px;
 }
 
 a {
@@ -10,6 +26,10 @@ a {
 
 .container{
   width: 70%;
+}
+
+.radius {
+  border-radius: 5px;
 }
 
 .centralize {
@@ -21,35 +41,82 @@ a {
 }
 
 /* Specific */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 600;
+}
+
+.more {
+  font-weight: 400;
+}
+
 fieldset {
   padding: 2em;
+  background: var(--white-color);
+  border: none;
 }
 
 input {
   border: 1px solid #ccc;
   width: 90%;
   height: 1.5em;
-  margin-bottom: 2em;
   padding: 1em;
 }
 
+input:focus {
+  outline-color: rgb(177, 27, 27);
+}
+
+.warning {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: 10px;
+  color: rgb(177, 27, 27);
+  text-align: right;
+  width: 96%;
+  opacity: 0;
+}
+
+input:focus ~ .warning {
+  opacity: 1;
+}
+
 #submit {
-  width: 99%;
+  font-weight: 400;
+  width: 97%;
   padding: 1.5em;
   padding-bottom: 2em;
   text-align: center;
+  color: var(--white-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .foot {
   text-align: center;
-  margin-top: 1em;
+  margin: 1em;
+  padding-bottom: 1em;
 }
 
 .foot .red {
-  color: red;
+  color: rgb(177, 27, 27);
+}
+
+.accent {
+ text-align: center;
+ background: var(--accent-color);
+ padding: 1em;
 }
 
 @media only screen and (min-width: 750px) {
+  body {
+    background: var(--primary-color) url("./images/bg-intro-desktop.png") no-repeat;
+  }
+  
   .flex {
     display: flex;
   }
